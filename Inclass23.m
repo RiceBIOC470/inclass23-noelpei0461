@@ -1,3 +1,19 @@
+%GB comments
+1. 70 incorrect plots. Should be generated like this:
+sol = ode23(@repressilator,[0 200], [1, 0,0]);
+hold on
+plot(sol.x, sol.y(1,:));
+plot(sol.x, sol.y(2,:));
+plot(sol.x, sol.y(3,:));
+hold off 
+legend('x1','x2','x3')
+
+2 70 incorrect plot. Please see the above plotting approach. Using this and inputting .5 for all starting concentrations will indicate that the oscillatory behavior is removed. Your straight line does not accurately capture what is occurring. 
+3. 80 plots are incorrect. Also need to mention the point in which oscillations are lost, dampened and increased. You mention 0.01 and 50, but there is interesting behavior at +/-1. 
+4. 100
+overall 80
+
+
 %In this directory, you will find a derivaitve function representing a
 %three gene circuit in which each gene product represses the transcription of another
 %gene in a cycle. This simple three gene circuit displays oscillations and was one
